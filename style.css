@@ -1,35 +1,204 @@
-/*{
-	margin: 0;
+*{
+			margin: 0;
+			font-family:'Poppins', sans-serif;
+			overflow-x: hidden;
+		}
+		html{
+			scroll-behavior: smooth;
+		}
+
+		body{
+			font-size: 100%;
+			background-color: grey !important;
+
+		}
+		     /*Scrollbar customization*/
+              /* width */
+              ::-webkit-scrollbar {
+                width: 10px;
+              }
+
+              /* Track */
+              ::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 5px grey; 
+                background-color: #fff;
+              }
+               
+              /* Handle */
+              ::-webkit-scrollbar-thumb {
+                background: red; 
+                height: 100px;
+                border-radius: 90px;
+              }
+
+              /* Handle on hover */
+              ::-webkit-scrollbar-thumb:hover {
+                background: darkred; 
+              }
+
+		#head{
+			height: 100vh;
+			background-image: url('images/home-img.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		li{
+			list-style: none;
+			display: inline;
+			padding-right: 30px;
+			direction: rtl;
+			font-size: 1.05em;
+		}
+
+		a{
+			text-decoration: none !important;
+			color: white !important;
+			transition: all .5s !important;
+		}
+
+		a:hover{
+			color: red !important;
+			text-decoration: underline !important;
+		}
+
+		.logo{
+			width: 50px;
+			display: flex;
+			float: left;
+			padding-top: 12px;
+			padding-bottom: 12px;
+			margin-left: 50px;
+		}
+
+		@media screen and (max-width:800px){
+		  #nav_bars{
+		    display: block !important;
+		    position: absolute;
+		    right: 50px;
+		    color: white;
+		  }
+		  
+		  #list{
+				display: none;
+				margin-right: 50px;
+			}
 }
 
-.head{
-	height: 100vh;
-	width: 100vw;
-	/*background-color: skyblue;
-	background-image: url('images/Wooden Hair Brush.webp');
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-@media and screen (max-width: 1130px){
-	.head{
-		background-position: center;
-	}
+#nav_bars{
+  display: none;
+  margin-top: 15px;
+  padding-top: 15px;
+  font-size: 20px;
+  transition: all .5s;
+  cursor: pointer;
 }
 
-/*.nav-bar{
-	background-color: skyblue;
-	height: 500px;
+#nav_bars:hover{
+	color: red;
+}
+
+.position{
+	position: fixed;
 	width: 100%;
+	z-index: 9000;
+	top: 0;
+	transition: all 300ms ease-in-out;
 }
 
-li{
-	list-style: none;
-	display: inline;
-	padding-right: 30px;
-	direction: rtl;
+.button{
+	background-color: red !important;
+	color: white !important;
+	transition: all .5s !important;
 }
 
-.nav-bar, a{
-	text-decoration: none;
+.button:hover{
+	background-color: darkred;
+	color: white;
 }
-*/
+
+.overlayy{
+       background-color: rgba(0,0,0,0.2);
+       position:  absolute;
+       top:  0;
+       left: 0;
+       z-index: 20;
+       width: 100%;
+       height: 100%;
+   }
+
+   .social{
+   	width: 30px;
+   }
+   
+   /*Scroll to top button*/
+   #btnScrollToTop{
+   	position: fixed;
+   	right: 10px;
+   	bottom: 10px;
+   	width: 50px;
+   	height: 50px;
+   	border-radius: 50%;
+   	background-color: red;
+   	box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+   	color: white;
+   	cursor: pointer;
+   	outline: none;
+   	border: none;
+   	transition: all .4s;
+   	display: none;
+   }
+
+   #btnScrollToTop:active{
+   	background-color: #cc2333;
+   }
+
+   #btnScrollToTop.active{
+   	opacity: 1;
+   	display: block;
+   }
+
+   .margin-top{
+   	margin-top: 70px;
+   }
+
+   .popup{
+   	position: fixed;
+   	top: -100%;
+   	left: 50%;
+   	transform: translate(-50%, -50%);
+   	z-index: 9999; 
+   	background-color: #000;
+   	width: 90%;
+   	height: 90%;
+   	padding: 80px 50px 50px;
+   	transition: 0.5s;
+   	visibility: hidden;
+   }
+
+   .popup.active{
+   	visibility: visible;
+   	top: 50%;
+   }
+
+   .close{
+   	position: absolute;
+   	top: 10px;
+   	right: 10px;
+   	color: white;
+   	cursor: pointer;
+   }
+
+   .close:hover{
+   	color: red;
+   }
+
+   #modal{
+   	text-align: left;
+   }
+
+   #modal li{
+   	display: block;
+   	padding-top: 30px;
+   }
