@@ -335,9 +335,16 @@
 		}
 }
 
+.slider{
+	width: 70%;
+}
+
 @media screen and (max-width: 525px){
 	.input{
 			width: 75%;
+		}
+		.slider{
+			width: 80%;
 		}
 }
 
@@ -346,3 +353,6 @@
 			width: 62%;
 		}
 }
+
+
+

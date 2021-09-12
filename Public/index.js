@@ -3,14 +3,36 @@
       function popupToggle(){
             const html = document.querySelector('.main');
       	const popup = document.querySelector('.popup');
-      	const pointer = document.getElementById('#pointer');
             const overlay = document.getElementById('overlay');
+            const toTopButton = document.getElementById('btnScrollToTop');
+            const logo = document.querySelector('.logo');
+            const link = document.getElementById('link');
+            const iframe = document.getElementById('iframe');
+            const exampleInputName1 = document.getElementById('exampleInputName1');
+            const exampleInputEmail1 = document.getElementById('exampleInputEmail1');
+            const exampleInputSubject1 = document.getElementById('exampleInputSubject1');
+            const exampleInputMessage1 = document.getElementById('exampleInputMessage1');
+            const submit = document.getElementById('submit');
+            const carouselExampleControls = document.getElementById('carouselExampleControls');
+            const link2 = document.getElementById('link2');
+            const nav_bars = document.getElementById('nav_bars');
+            const input = document.getElementById('input');
+            link.classList.toggle('no-pointer');
+            iframe.classList.toggle('no-pointer');
+            exampleInputName1.classList.toggle('no-pointer');
+            exampleInputEmail1.classList.toggle('no-pointer');
+            exampleInputSubject1.classList.toggle('no-pointer');
+            exampleInputMessage1.classList.toggle('no-pointer');
+            submit.classList.toggle('no-pointer');
+            carouselExampleControls.classList.toggle('no-pointer');
+            link2.classList.toggle('no-pointer');
+            input.classList.toggle('no-pointer');
+            nav_bars.classList.toggle('no-pointer');
       	popup.classList.toggle('active');
-            // pointer.style.cssText = 'pointer-events:none';
             overlay.classList.toggle('active');
             html.classList.toggle('overflow');
-            // .style.pointerEvents = 'none';
-            
+            toTopButton.classList.toggle('no-pointer');
+            logo.classList.toggle('no-pointer');
       }
 
 // fixed nav bar
