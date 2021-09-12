@@ -206,7 +206,7 @@
    	background-color: #000;
    	width: 90%;
    	height: 90%;
-   	padding: 70px 70px 0px 0px;
+   	padding: 70px 10px 0px 0px;
    	transition: 0.5s;
    	visibility: hidden;
    }
